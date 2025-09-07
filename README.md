@@ -1,6 +1,6 @@
 USTH ICT Android Development 2025
 ========================================
 
-* **Your ID**
-* **Your name**
-* **Your class**
+* **23BI14334**
+* **Pham Tuong Ngan**
+* **Class 2**
