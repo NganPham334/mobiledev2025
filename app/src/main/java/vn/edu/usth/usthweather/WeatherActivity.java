@@ -12,7 +12,11 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Fragment forecast = new ForecastFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container_view, forecast).commit();
+        Fragment weather = new WeatherFragment();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.container_weather, weather)
+                .add(R.id.container_forecast, forecast)
+                .commit();
         for (StackTraceElement stelement : Thread.currentThread().getStackTrace()) {
             Log.i("STLog", stelement.toString());
         }
