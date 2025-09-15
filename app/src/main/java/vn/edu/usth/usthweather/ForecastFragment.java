@@ -1,5 +1,6 @@
 package vn.edu.usth.usthweather;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         LinearLayout layout = new LinearLayout(getActivity());
+        layout.setBackgroundColor(Color.BLUE);
         layout.setOrientation(LinearLayout.VERTICAL);
         TextView text = new TextView(getActivity());
         text.setText("Thursday");
