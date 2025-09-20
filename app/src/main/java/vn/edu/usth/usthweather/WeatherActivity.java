@@ -3,7 +3,10 @@ package vn.edu.usth.usthweather;
 import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -11,12 +14,15 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Fragment forecast = new ForecastFragment();
-        Fragment weather = new WeatherFragment();
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.container_weather, weather)
-                .add(R.id.container_forecast, forecast)
-                .commit();
+//        Fragment pager = new CollectionFragment();
+//        getSupportFragmentManager().beginTransaction()
+//                .add(R.id.pager, pager)
+//                .commit();
+        ViewPager2 pager = findViewById(R.id.pager);
+        FragmentAdapter adapter = new FragmentAdapter(this);
+        pager.setAdapter(adapter);
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setText("Page " + (position + 1))).attach();
         for (StackTraceElement stelement : Thread.currentThread().getStackTrace()) {
             Log.i("STLog", stelement.toString());
         }

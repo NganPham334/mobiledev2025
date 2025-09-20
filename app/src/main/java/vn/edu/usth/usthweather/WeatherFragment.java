@@ -18,7 +18,6 @@ public class WeatherFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         RelativeLayout layout = new RelativeLayout(getActivity());
         layout.setBackgroundColor(Color.GREEN);
         TextView text = new TextView(getActivity());
@@ -28,7 +27,7 @@ public class WeatherFragment extends Fragment {
         textParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         textParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
         text.setLayoutParams(textParams);
-        text.setText("2dey");
+        text.setText("2dey weather");
         text.setTextColor(Color.BLACK);
         layout.addView(text);
         ImageView image = new ImageView(getActivity());

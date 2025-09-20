@@ -19,7 +19,7 @@ public class ForecastFragment extends Fragment {
         layout.setBackgroundColor(Color.BLUE);
         layout.setOrientation(LinearLayout.VERTICAL);
         TextView text = new TextView(getActivity());
-        text.setText("Thursday");
+        text.setText("Thursday Forecast");
         layout.addView(text);
         ImageView image = new ImageView(getActivity());
         image.setImageResource(R.drawable.forcastshit);
