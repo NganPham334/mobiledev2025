@@ -27,7 +27,7 @@ public class WeatherFragment extends Fragment {
         textParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         textParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
         text.setLayoutParams(textParams);
-        text.setText("2dey weather");
+        text.setText(R.string.today);
         text.setTextColor(Color.BLACK);
         layout.addView(text);
         ImageView image = new ImageView(getActivity());

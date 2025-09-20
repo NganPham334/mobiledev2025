@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">thời tiết hust</string>
+    <string name="hello_blank_fragment">chào fragment blank</string>
+    <string name="today">hôm nay</string>
+    <string name="day">hom kiaf</string>
+</resources>
