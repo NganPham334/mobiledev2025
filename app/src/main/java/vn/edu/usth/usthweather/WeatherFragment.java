@@ -33,6 +33,7 @@ public class WeatherFragment extends Fragment {
         ImageView image = new ImageView(getActivity());
         image.setImageResource(R.drawable.forcastshit);
         layout.addView(image);
+        layout.setBackgroundResource(R.drawable.frame_fixed);
         return layout;
     }
 }
